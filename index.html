@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta discription="Path finding visualization">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  </head>
+
+
+  <body onload = "app.launch()">
+    <div class = "navbar">
+      <div>
+        <button class="btn btn-outline-primary" onclick="Grid.selectObstacles()">
+          Add Blocks
+        </button>
+        <button class="btn btn-outline-primary" onclick="Grid.randomizeObstacles()">
+          Randomize Blocks
+        </button>
+        <button class="btn btn-outline-primary" onclick="app.setDiaMovement()" id="setDia">
+          Enable Dia Movement
+        </button>
+        <select class="btn btn-outline-primary" id="algorithm">
+          <option>AStar</option>
+          <option>Dijkstra</option>
+          <option>BFS</option>
+        </select>
+        <select class="btn btn-outline-primary" id="speed">
+          <option>Fast</option>
+          <option>Slow</option>
+          <option>Medium</option>
+        </select>
+        <button class="btn btn-outline-primary" onclick="app.startSearch()">
+          Visualize
+        </button>
+        <button class="btn btn-outline-primary" onclick="Grid.clearPath()">
+          Clear Board
+        </button>
+        <button class="btn btn-outline-primary" onclick="history.go()">
+          Reset
+        </button>
+      </div>   
+    </div>
+
+    <div class="grid"></div>
+
+    <div class="footer">
+      <a href="https://www.linkedin.com/in/rahul-kumar-sablaniya-2ab9b017b" class="icon-button linkedin"><i class="icon-linkedin fa fa-linkedin"></i><span></span></a>
+      <a href="https://www.facebook.com/rahulkumar.sablaniya" class="icon-button facebook"><i class="icon-facebook fa fa-facebook"></i><span></span></a>  
+      <a href="https://github.com/rahulkumar9460" class="icon-button github"><i class="icon-github fa fa-github"></i><span></span></a>
+    </div>
+
+    <div class="instructions">
+      <div class="hide" onclick="app.hideInstructions()">Hide</div>
+      <div><strong>Instructions</strong><br>
+         Click on the <span class="red">red</span> node then click on any node to set the start node<br>
+         Click on the <span class="green">green</span> node then click on any node to set the goal node<br>
+         Select "Add blocks", now click and drag on grid to creat obstacles<br>
+         Choose an algorithm from top menu
+      </div>  
+    </div>
+
+    <div class="noPathFound" onclick="app.hideNoPathFound()">
+      <h1>NO PATH FOUND</h1>
+      <h4>(click to hide)</h4>
+    </div>
+    
+    <script src="js/app.js"></script>
+    <script src="js/ASTAR.js"></script>
+    <script src="js/Dijkstra.js"></script>
+    <script src="js/BFS.js"></script>
+    <script src="js/grid.js"></script>
+  </body>
+</html>
