@@ -78,9 +78,7 @@ let Grid = (function () {
       
       if(check == 1 && check1 == 1) {
         if(typeofNode !== 'start' && typeofNode !== 'goal') {
-          if(typeofNode === 'obstacle') {
-            setTypeToNode('empty', node);
-          } else {
+          if(typeofNode === 'empty') {
             setTypeToNode('obstacle', node);
           }
         }
