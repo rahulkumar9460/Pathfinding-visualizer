@@ -2,7 +2,7 @@ let Grid = (function () {
     const ZERO = 0;
     let grid;
     let width, height;
-    let check = 0;
+    let check = 1;
     let check1 = 0;
     let disableEditing = false;             //will allow user to creat obstacle and to change the position of start and end node
     let visualizationSpeed = 60;
