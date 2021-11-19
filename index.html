@@ -6,19 +6,19 @@
     <meta discription="Path finding visualization">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
+  
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+  
   </head>
 
 
   <body onload = "app.launch()">
     <div class = "navbar">
       <div>
-        <button class="btn btn-outline-primary" onclick="Grid.selectObstacles()">
+        <!--<button class="btn btn-outline-primary" onclick="Grid.selectObstacles()">
           Add Blocks
-        </button>
+        </button> -->
         <button class="btn btn-outline-primary" onclick="Grid.randomizeObstacles()">
           Randomize Blocks
         </button>
@@ -60,8 +60,8 @@
       <div><strong>Instructions</strong><br>
          Click on the <span class="red">red</span> node then click on any node to set the start node<br>
          Click on the <span class="green">green</span> node then click on any node to set the goal node<br>
-         Select "Add blocks", now click and drag on grid to creat obstacles<br>
-         Choose an algorithm from top menu
+         Choose an algorithm from top menu<br>
+         Please press Reset is any error occures
       </div>  
     </div>
 
